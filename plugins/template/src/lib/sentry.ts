@@ -1,14 +1,14 @@
-import { findByProps } from "@vendetta/metro";
-import { noop } from "./utils";
+//import { findByProps } from "@vendetta/metro";
+//import { noop } from "./utils";
 
-const Sentry = {
+//const Sentry = {
     initializer: findByProps("initSentry"),
     main: globalThis.__SENTRY__?.hub,
     client: globalThis.__SENTRY__?.hub?.getClient(),
 };
 
-export default () => {
-    const patches = [
+//export default () => {
+    //const patches = [
         noop("initSentry", Sentry.initializer),
         noop("addBreadcrumb", Sentry.main),
     ];
@@ -18,7 +18,7 @@ export default () => {
     Sentry.main.getStackTop().scope.clear();
     Sentry.main.getScope().clear();
 
-    return () => {
+    //return () => {
         patches.forEach((p) => p());
         Sentry.client.getOptions().enabled = true;
         Sentry.client.open();
