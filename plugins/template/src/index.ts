@@ -1,12 +1,15 @@
-import { logger } from "@vendetta";
-import Settings from "./Settings";
+//import network from "./lib/network";
+//import console from "./lib/console";
+//import miscellanous from "./lib/miscellanous";
+//import sentry from "./lib/sentry";
 
-export default {
-    onLoad: () => {
-        logger.log("Hello world!");
-    },
-    onUnload: () => {
-        logger.log("Goodbye, world.");
-    },
-    settings: Settings,
+//const patches = [
+    //network(),
+    //console(),
+    //miscellanous(),
+    //sentry(),
+];
+
+//export function onUnload() {
+    patches.forEach(p => p());
 }
