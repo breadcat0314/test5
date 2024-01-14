@@ -7,7 +7,7 @@ const patches = [
     network(),
     //console(),
     miscellanous(),
-    //sentry(),
+    sentry(),
 ];
 
 export function onUnload() {
