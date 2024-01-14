@@ -1,1 +1,1 @@
-(function(n){"use strict";const o=[];function t(){o.forEach(function(c){return c()})}return n.onUnload=t,n})({});
+(function(n,e){"use strict";function r(){const t=/client-analytics\.braintreegateway\.com|discord\.com\/api\/v9\/(science|track)|app\.adjust\..*|.*\.ingest\.sentry\.io/;return e.instead("send",XMLHttpRequest.prototype,function(o,a){if(!t.test(this.__sentry_xhr__?.url))return a.apply(this,o)})}const c=[r()];function i(){c.forEach(function(t){return t()})}return n.onUnload=i,n})({},vendetta.patcher);
