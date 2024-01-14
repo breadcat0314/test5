@@ -6,7 +6,7 @@ import sentry from "./lib/sentry";
 const patches = [
     network(),
     //console(),
-    //miscellanous(),
+    miscellanous(),
     //sentry(),
 ];
 
