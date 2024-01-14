@@ -4,7 +4,7 @@ import miscellanous from "./lib/miscellanous";
 import sentry from "./lib/sentry";
 
 const patches = [
-    //network(),
+    network(),
     //console(),
     //miscellanous(),
     //sentry(),
